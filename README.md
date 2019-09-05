@@ -5,3 +5,8 @@
 
 *说明
 app.js这个文件是将area_data的数据转为dist的数据，可根据业务需要改动数据
+
+```
+# nginx添加以下配置，方便前端调用 
+try_files $uri $uri/ /404.json
+```
