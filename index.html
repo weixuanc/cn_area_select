@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>城光联链级联选择器数据使用文档</title>
+  <style>
+  
+  </style>
+</head>
+<body>
+  <h1>城光联链级联选择器数据使用文档</h1>
+  <em>说明：地区码由12为组成，[1-2]代表省份、[3-4]代表城市、[5-6]代表区县、[7-9]代表城镇、[10-12]代表乡村</em>
+  <dl>
+    <dt>获取所有省份：</dt>
+    <dd>/area/province.json</dd>
+  </dl>
+  <dl>
+    <dt>获取省份下的城市：</dt>
+    <dd>/area/[province_area_code]/city.json</dd>
+  </dl>
+  <dl>
+    <dt>获取城市下的区县：</dt>
+    <dd>/area/[province_area_code]/[city_area_code]/county.json</dd>
+  </dl>
+  <dl>
+    <dt>获取县区下的城镇：</dt>
+    <dd>/area/[province_area_code]/[city_area_code]/[county_area_code]/town.json</dd>
+  </dl>
+  <dl>
+    <dt>获取城镇下的乡村：</dt>
+    <dd>/area/[province_area_code]/[city_area_code]/[county_area_code]/village.json</dd>
+  </dl>
+  <dl>
+    <dt>根据adcode获取区域：</dt>
+    <dd>/area/parse?adCode=[area_code]</dd>
+  </dl>
+  <dl>
+    <dt>使用例子：</dt>
+    <dd>获取省份数据： http://area.c2lightlink.com/area/province.json</dd>
+    <dd>获取城市数据： http://area.c2lightlink.com/area/35/city.json</dd>
+    <dd>获取县区数据： http://area.c2lightlink.com/area/35/02/county.json</dd>
+    <dd>获取城镇数据： http://area.c2lightlink.com/area/35/02/12/town.json</dd>
+    <dd>获取乡村数据： http://area.c2lightlink.com/area/35/02/12/108/village.json</dd>
+    <dd>根据adcode获取区域： http://area.c2lightlink.com/area/parse?adCode=350211001000</dd>
+  </dl>
+</body>
+</html>
